@@ -35,6 +35,7 @@ The app works in multiply phases:
 3. Fetch user tweets and save to DB.
 4. Display as REST api and Web View.
 5. Display Retweet, Favorites, Reply, ...
+6. Display the device used to send the tweet.
 
 **API Endpoints:**
 - Make a REST API with the following endpoints:
