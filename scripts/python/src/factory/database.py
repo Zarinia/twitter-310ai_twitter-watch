@@ -6,7 +6,7 @@ from bson import ObjectId
 
 config = {
 	"db": {
-		"url": "mongodb://localhost:27017/",
+		"url": "mongodb://mongodb:27017/",
 		"name": "twitter",
 		"user": "",
 		"password": ""
