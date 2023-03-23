@@ -36,7 +36,18 @@ The app works in multiply phases:
     - /tweets/user/:username [GET] return all tweets by username
     - /tweets/fetch/ [GET] Fetch tweets by username from tweeter
     
-When run /users/fetch/:username endpoint, system get all data from twitter server by run python file from scripts directory and scrape data, then save data into databse if option create is set. 
+When run /users/fetch/:username endpoint, system get all data from twitter server by run python file from scripts directory and scrape data, then save data into database if option create is set. 
+
+Screenshot from web view of users:
+  - all users:
+  ![alt text](https://github.com/Zarinia/twitter-310ai/screenshot/alluseers.png)
+  - elonmusk:
+    ![alt text](https://github.com/Zarinia/twitter-310ai/screenshot/elonmusk.png)
+  - BarackObama
+    ![alt text](https://github.com/Zarinia/twitter-310ai/screenshot/BarackObama.png)
+  - cathiedwood
+    ![alt text](https://github.com/Zarinia/twitter-310ai/screenshot/cathiedwood.png)
+
 
 **User Data from twitter server contains:**
   - id_str
