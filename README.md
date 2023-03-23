@@ -42,10 +42,14 @@ The app works in multiply phases:
     - /users/name/:username [GET] return data for specific user with username
     - /users/fetch/:username [GET] get all user data from twitter server
     - /users/:username [POST] fetch user from twitter and insert user into database
+    - /users/:username [PATCH] Update user
+    - /users/:username [DELETE] Delete user
   - tweets endpoints:
     - /tweets [GET] return all tweets saved in database.
     - /tweets/user/:username [GET] return all tweets by username
     - /tweets/fetch/ [GET] Fetch tweets by username from tweeter
+    - /tweets/:tweet [PATCH] Update tweet (feature)
+    - /tweets/:tweet [DELETE] Delete tweet (feature)
 
 **Postman File:**
 
