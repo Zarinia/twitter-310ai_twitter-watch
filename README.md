@@ -40,7 +40,7 @@ When run /users/fetch/:username endpoint, system get all data from twitter serve
 
 Screenshot from web view of users:
   - all users:
-  ![alt text](https://github.com/Zarinia/twitter-310ai/blob/main/screenshot/alluseers.png)
+  ![alt text](https://github.com/Zarinia/twitter-310ai/blob/main/screenshot/allusers.png)
   - elonmusk:
     ![alt text](https://github.com/Zarinia/twitter-310ai/blob/main/screenshot/elonmusk.png)
   - BarackObama
