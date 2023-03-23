@@ -36,6 +36,7 @@ The app works in multiply phases:
 4. Display as REST api and Web View.
 5. Display Retweet, Favorites, Reply, ...
 6. Display the device used to send the tweet.
+7. Display User Following and Followers, Status, Media, List, Request & etc.
 
 **API Endpoints:**
 - Make a REST API with the following endpoints:
