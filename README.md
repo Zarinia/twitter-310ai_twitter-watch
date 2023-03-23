@@ -40,13 +40,13 @@ When run /users/fetch/:username endpoint, system get all data from twitter serve
 
 Screenshot from web view of users:
   - all users:
-  ![alt text](https://github.com/Zarinia/twitter-310ai/tree/main/screenshot/alluseers.png)
+  ![alt text](https://github.com/Zarinia/twitter-310ai/blob/main/screenshot/alluseers.png)
   - elonmusk:
-    ![alt text](https://github.com/Zarinia/twitter-310ai/tree/main/screenshot/elonmusk.png)
+    ![alt text](https://github.com/Zarinia/twitter-310ai/blob/main/screenshot/elonmusk.png)
   - BarackObama
-    ![alt text](https://github.com/Zarinia/twitter-310ai/tree/main/screenshot/BarackObama.png)
+    ![alt text](https://github.com/Zarinia/twitter-310ai/blob/main/screenshot/BarackObama.png)
   - cathiedwood
-    ![alt text](https://github.com/Zarinia/twitter-310ai/tree/main/screenshot/cathiedwood.png)
+    ![alt text](https://github.com/Zarinia/twitter-310ai/blob/main/screenshot/cathiedwood.png)
 
 
 **User Data from twitter server contains:**
