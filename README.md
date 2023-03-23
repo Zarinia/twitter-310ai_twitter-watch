@@ -46,7 +46,10 @@ The app works in multiply phases:
     - /tweets [GET] return all tweets saved in database.
     - /tweets/user/:username [GET] return all tweets by username
     - /tweets/fetch/ [GET] Fetch tweets by username from tweeter
-    
+
+**Postman File**
+
+
 When run /users/fetch/:username endpoint, system get all data from twitter server by run python file from scripts directory and scrape data, then save data into database if option create is set. 
 
 Screenshot from web view of users:
