@@ -16,6 +16,17 @@ Track the tweets of users and extract them to MongoDB database.
 
 #### Tip!
 Everything is configured in the docker-compose file.
+Docker file for build nodejs and compose for pull mongodb database and run backend.
+
+## How to install:
+1. Clone project from GitHub
+2. Run docker compose up -d
+
+For manually install:
+1. Clone project from GitHub
+2. Run yarn install
+3. From scripts/python run pip3 install -r requirements.txt
+4. Run npm build OR npm run start
 
 ## How it works:
 The app works in multiply phases:
