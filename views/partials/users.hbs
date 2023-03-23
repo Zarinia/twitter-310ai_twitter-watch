@@ -1,0 +1,10 @@
+<div class="sidebar">
+  <i class="fab fa-twitter"></i>
+  User Tweets
+  {{#each allUsers}}
+    <div class="sidebarOption">
+      <span class="material-icons"> person </span>
+      <a href="/web/tweets/{{{this.screen_name}}}" target="_self"><h3>{{{this.screen_name}}}</h3></a>
+    </div>
+  {{/each}}
+</div>

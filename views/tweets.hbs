@@ -1,0 +1,115 @@
+<div class="feed">
+  <div class="feed__header">
+    <span class="user_name">{{"escape" user.name}}</span>
+    {{#if user.verified}}
+      <span class="material-icons post__badge"> verified </span>
+    {{/if}}
+    <div>{{tweets.length}} Tweets</div>
+  </div>
+  <div class="feed__top">
+    {{#if user.profile_banner_url}}
+      <div class="feed__banner" style="background-image: url('/images/users/{{screen_name}}_banner.jpg')">
+        <div class="post__header_avatar">
+          <img src="/images/users/{{user.screen_name}}.jpg" alt="" />
+        </div>
+      </div>
+    {{else if user.profile_background_image_url_https}}
+      <div class="feed__banner" style="background-image: url('/images/users/{{screen_name}}_bg.jpg')">
+        <div class="post__header_avatar">
+          <img src="/images/users/{{user.screen_name}}.jpg" alt="" />
+        </div>
+      </div>
+    {{/if}}
+    <div class="follow"><a href="{{user.url}}" target="_blank">Follow</a></div>
+    <div class="user__body">
+      <span class="user_name">{{"escape" user.name}}</span>
+      {{#if user.verified}}
+        <span class="material-icons post__badge"> verified </span>
+      {{/if}}
+      <div>@{{user.screen_name}}</div>
+      <div class="post__userDescription">{{user.description}}</div>
+      <div class="divider"></div>
+      {{#if user.location}}
+        <span class="material-icons"> pin_drop </span> <span class="sub">{{user.location}}</span>
+      {{/if}}
+      {{#if user.entities.0.url}}
+        <a href="{{user.entities.0.url.urls.0.expanded_url}}" target="_blank"><span class="material-icons"> link </span>
+          <span class="">{{user.entities.0.url.urls.0.display_url}}</span></a>
+      {{/if}}
+      <span class="material-icons"> calendar_month </span> <span class="sub">{{user.created_at}}</span>
+      <div class="divider"></div>
+      <span class="">{{nFormatter user.friends_count}}</span><span class="sub"> Following </span>
+      <span class="">{{nFormatter user.followers_count}}</span><span class="sub"> Followers </span>
+      <div class="divider"></div>
+      <span class="">{{nFormatter user.statuses_count}}</span><span class="sub"> Status </span>
+      <span class="">{{nFormatter user.media_count}}</span><span class="sub"> Media </span>
+      <span class="">{{nFormatter user.listed_count}}</span><span class="sub"> List </span>
+      <span class="">{{nFormatter user.follow_request_sent}}</span><span class="sub"> Request </span>
+    </div>
+  </div>
+  {{#each tweets}}
+    <!-- post starts -->
+    <div class="post">
+      <div class="post__avatar">
+        <img src="/images/users/{{this.user.0.screen_name}}.jpg" alt="" />
+      </div>
+      <div class="post__body">
+        <div class="post__header">
+          <div class="post__headerText">
+            <h3>
+              {{"escape" this.user.0.name}}
+              <span class="post__headerSpecial">
+                {{#if this.user.0.verified}}
+                  <span class="material-icons post__badge"> verified </span>
+                {{/if}}
+                <span class="at">@{{'escape' this.user.0.screen_name}}</span>
+              </span>
+            </h3>
+          </div>
+          <div class="post__headerDescription">
+            <p {{#ifCond this.lang '===' 'fa'}} class="text-right"{{/ifCond}}>{{{textSplit this.text}}}</p>
+          </div>
+        </div>
+        <!--        <img src="/images/users/{{this.user.0.screen_name}}_bg.jpg" alt="" />-->
+        <div class="post__footer">
+          <div class="tweet_details">
+            <span class="material-icons retweet">repeat</span>
+            <span class="tweet-count">{{nFormatter this.retweet_count}}</span>
+          </div>
+          <div class="tweet_details">
+            <span class="material-icons favorite">favorite_border</span>
+            <span class="tweet-count">{{nFormatter this.favorite_count}}</span>
+          </div>
+          <div class="tweet_details">
+            <span class="material-icons publish">publish</span>
+            <!--            <span class="tweet-count">{{this.truncated}}</span>-->
+          </div>
+        </div>
+        <div class="post__from">
+          <p class="footer">Lang: {{{this.lang}}}</p>
+        </div>
+        <div class="post__from">
+          <p class="footer">Device: {{{this.source}}}</p>
+        </div>
+        {{#if this.in_reply_to_screen_name}}
+          <div class="post__from">
+            <p class="footer">In reply: {{{this.in_reply_to_screen_name}}}</p>
+          </div>
+        {{/if}}
+        {{#if this.retweet_count}}
+          <div class="post__from">
+            <p class="footer">Retweet: {{{this.retweet_count}}}</p>
+          </div>
+        {{/if}}
+        <div class="post__from date">
+          <p class="footer">Date: {{{this.created_at}}}</p>
+          <div class="footer">Created: {{{this.created}}}</div>
+          {{#if this.updated}}
+            <div class="footer">Updated: {{{this.updated}}}</div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+    <!-- post ends -->
+  {{/each}}
+</div>

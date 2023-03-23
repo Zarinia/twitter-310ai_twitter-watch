@@ -1,0 +1,398 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --twitter-color: #50b7f5;
+    --twitter-background: #e6ecf0;
+}
+
+.text-right {
+    text-align: right;
+    direction: rtl;
+}
+
+.sidebarOption {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sidebarOption .material-icons,
+.fa-twitter {
+    padding: 20px;
+}
+
+.sidebarOption h2 {
+    font-weight: 500;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+.sidebarOption h3 {
+    font-weight: 500;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.sidebarOption:hover {
+    background-color: var(--twitter-background);
+    border-radius: 30px;
+    color: var(--twitter-color);
+    transition: color 100ms ease-out;
+}
+
+.sidebarOption.active {
+    color: var(--twitter-color);
+}
+
+.sidebar__tweet {
+    width: 100%;
+    background-color: var(--twitter-color);
+    border: none;
+    color: white;
+    font-weight: 900;
+    border-radius: 30px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+
+.sidebar {
+    border-right: 1px solid var(--twitter-background);
+    flex: 0.2;
+
+    min-width: 250px;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.fa-twitter {
+    color: var(--twitter-color);
+    font-size: 30px;
+}
+
+/* feed */
+.feed {
+    flex: 0.5;
+    border-right: 1px solid var(--twitter-background);
+    min-width: fit-content;
+    overflow-y: scroll;
+}
+
+.feed__header {
+    position: sticky;
+    top: 0;
+    background-color: #e6ecf0e6;
+    z-index: 100;
+    /*height: 200px;*/
+    width: 100%;
+    border: 1px solid var(--twitter-background);
+    font-size: 13px;
+    line-height: 20px;
+    padding: 10px 50px;
+}
+
+.feed__banner {
+    height: 200px;
+    width: 100%;
+    padding: 15px 20px;
+    background: no-repeat bottom center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.feed__header h2 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: 40px;
+}
+
+.feed::-webkit-scrollbar {
+    display: none;
+}
+
+.feed {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* tweet box */
+.tweetbox__input img {
+    border-radius: 50%;
+    height: 40px;
+}
+
+.tweetBox {
+    padding-bottom: 10px;
+    border-bottom: 8px solid var(--twitter-background);
+    padding-right: 10px;
+}
+
+.tweetBox form {
+    display: flex;
+    flex-direction: column;
+}
+
+.tweetbox__input {
+    display: flex;
+    padding: 20px;
+}
+
+.tweetbox__input input {
+    flex: 1;
+    margin-left: 20px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+
+.tweetBox__tweetButton {
+    background-color: var(--twitter-color);
+    border: none;
+    color: white;
+    font-weight: 900;
+
+    border-radius: 30px;
+    width: 80px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: auto;
+}
+
+/* post */
+.post__avatar img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.post {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--twitter-background);
+    padding-bottom: 10px;
+}
+
+.post__body img {
+    width: 450px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.post__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: fit-content;
+}
+
+.tweet_details {
+    margin-right: 10px;
+}
+
+.material-icons {
+    font-size: 20px !important;
+}
+
+.user__body {
+    padding: 10px;
+    position: relative;
+    top: 80px;
+    height: 200px;
+    width: 600px;
+    word-wrap: break-word;
+}
+
+.user_name {
+    font-weight: bold;
+}
+
+.post__userDescription {
+    width: 100%;
+    margin-top: 10px;
+    color: var(--twitter-color);
+}
+
+.tweet-count {
+    font-size: 15px !important;
+}
+
+.sub {
+    color: gray;
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.divider {
+    margin-top: 10px;
+}
+
+.post__from {
+    margin-top: 20px;
+}
+
+.feed__top {
+    width: 100%;
+    height: 500px;
+    border: 1px solid var(--twitter-background);
+}
+
+.post__badge {
+    font-size: 15px !important;
+    color: var(--twitter-color);
+    margin-right: 5px;
+}
+
+.post__headerSpecial {
+    font-weight: 600;
+    font-size: 12px;
+    color: gray;
+}
+
+.post__headerText h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.post__headerDescription {
+    margin-bottom: 10px;
+    font-size: 15px;
+    width: auto;
+    max-width: 500px;
+    word-wrap: break-word
+}
+
+.post__body {
+    flex: 1;
+    padding: 10px;
+}
+
+.post__header_avatar {
+    position: relative;
+    top: 110px;
+    left: 0px;
+}
+
+.post__header_avatar img {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+.follow {
+    position: relative;
+    right: 20px;
+    text-align: right;
+    top: 20px;
+    font-size: 13px;
+    border: 1px solid var(--twitter-color);
+    display: inline-block;
+    float: right;
+    padding: 10px;
+    background-color: var(--twitter-color);
+    color: white;
+    border-radius: 30px;
+}
+
+.follow a {
+    color: var(--twitter-background);
+}
+
+.post__avatar {
+    padding: 20px;
+}
+
+/* widgets */
+.widgets {
+    flex: 0.3;
+}
+
+.widgets__input {
+    display: flex;
+    align-items: center;
+    background-color: var(--twitter-background);
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.widgets__input input {
+    border: none;
+    background-color: var(--twitter-background);
+}
+
+.widgets__searchIcon {
+    color: gray;
+}
+
+.widgets__widgetContainer {
+    margin-top: 15px;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #f5f8fa;
+    border-radius: 20px;
+}
+
+.widgets__widgetContainer h2 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.footer {
+    font-size: 15px;
+}
+
+.retweet {
+    color: #0d47a1;
+}
+
+.favorite {
+    color: #c2185b;
+}
+
+.publish {
+    color: #0a6640;
+}
+
+.at {
+    font-size: 15px;
+}
+
+.date {
+    color: #7a7b7c;
+    font-size: 13px !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.users {
+}
+
+.users .post {
+}
+
+.users .post .post__body {
+    margin-top: 50px;
+}
+
+.users .post .post__avatar img {
+    height: 100px;
+    width: 100px;
+}

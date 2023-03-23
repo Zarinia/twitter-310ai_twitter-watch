@@ -1,0 +1,53 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2019",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@users/*": [
+        "src/modules/users/*"
+      ],
+      "@home/*": [
+        "src/modules/home/*"
+      ],
+      "@tweets/*": [
+        "src/modules/tweets/*"
+      ],
+      "@python/*": [
+        "src/modules/python/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".idea",
+    ".js",
+    "scripts/python/.idea",
+    "scripts/python/venv"
+  ],
+  "types": [
+    "node"
+  ]
+}

@@ -1,0 +1,60 @@
+version: "3.9"
+services:
+  back_app:
+    container_name: twitter
+    depends_on:
+      - mongodb
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./
+    ports:
+      - "8080:3000"
+    environment:
+      DB_URL: mongodb://${MONGODB_USER}:${MONGODB_PASS}@mongodb:27017/${MONGODB_DB}
+    #      - DB_URL=mongodb://mongodb:27017/twitter
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    env_file:
+      - .env
+    links:
+      - mongodb
+    network_mode: bridge
+    networks:
+      - interface
+
+  #  python_app:
+  #    build:
+  #      context: .
+  #      dockerfile: Dockerfile
+  #    depends_on:
+  #      - db
+  #    networks:
+  #      - app-tier
+  #    command:
+  #      tail -f /dev/null
+
+  mongodb:
+    image: mongo
+    restart: unless-stopped
+    container_name: db_mongo
+#    command: [ "--auth" ]
+#    environment:
+#      MONGO_INITDB_DATABASE: ${MONGODB_DB}
+#      MONGO_INITDB_ROOT_USERNAME: ${MONGODB_USER}
+#      MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_PASS}
+    volumes:
+      - ./mongodata:/data/db
+    ports:
+      - "27017:27017"
+    expose:
+      - "27017"
+    networks:
+      - interface
+
+volumes:
+  mongodata:
+networks:
+  interface:
+    driver: bridge
