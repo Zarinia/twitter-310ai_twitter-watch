@@ -53,7 +53,8 @@ The app works in multiply phases:
     - /tweets/fetch/ [GET] Fetch tweets by username from tweeter
     - /tweets/:tweet [PATCH] Update tweet (feature)
     - /tweets/:tweet [DELETE] Delete tweet (feature)
-
+  - web endpoints:
+    - /web [GET] return web view for users and tweets. 
 **Postman File:**
 
 From postman directory you can import postman exported file into your app.
